@@ -1,6 +1,7 @@
 class Member < ActiveRecord::Base
   attr_accessible :name
   has_many :libraries  
+  has_many :identities
 
   def self.from_omniauth(auth)
   	find_by_provider_and_uid(auth["provider"], auth["uid"]) || create_with_ominauth(auth) 
