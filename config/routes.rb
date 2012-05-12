@@ -1,4 +1,12 @@
 Ubooquitous::Application.routes.draw do
+  root to: "sessions#new"
+  
+  match "/auth/:provider/callback" => "sessions#create"
+  match "/auth/failure", to: "sessions#failure"
+  match "/logout" => "sessions#destroy", :as => "logout"
+
+  resources :identities
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
