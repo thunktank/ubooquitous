@@ -1,10 +1,12 @@
 class SessionsController < ApplicationController
 	force_ssl
+
 	def new
 	end
 
 	def create
 	  member = Member.from_omniauth(env["omniauth.auth"])
+	  reset_session
 	  session[:member_id] = member.id
 	  redirect_to root_url, :notice => "Signed in!"
 	end

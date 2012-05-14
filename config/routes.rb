@@ -1,5 +1,7 @@
 Ubooquitous::Application.routes.draw do
   root to: "sessions#new"
+
+  match "/login" => "sessions#new", :as => "login"
   
   match "/auth/:provider/callback" => "sessions#create"
   match "/auth/failure", to: "sessions#failure"
