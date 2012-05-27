@@ -5,9 +5,6 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3'
-
-
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -22,13 +19,14 @@ end
 
 gem 'jquery-rails'
 
-# gem 'omniauth-twitter'
-# gem 'omniauth-google-oauth2'
 # gem 'omniauth-facebook'
+# gem 'omniauth-github'
+# gem 'omniauth-google-oauth2'
 gem 'omniauth-identity'
+# gem 'omniauth-twitter'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '~> 3.0.0'
+# gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -41,3 +39,16 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+# Use RSpec and Cucumber for testing
+group :development, :test do 
+	gem 'sqlite3'
+	gem 'rspec-rails', '>= 2.10.0'
+	gem 'webrat', '>= 0.7.2'
+end
+
+# Cucumber-rails required outside of env.rb. 
+group :test do
+	gem 'cucumber-rails', '>= 1.2.0' 
+end	
+
