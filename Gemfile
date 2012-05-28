@@ -26,7 +26,7 @@ gem 'omniauth-identity'
 # gem 'omniauth-twitter'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
@@ -49,6 +49,7 @@ end
 
 # Cucumber-rails required outside of env.rb. 
 group :test do
+	gem 'ZenTest', '>= 4.8.0'
 	gem 'cucumber-rails', '>= 1.2.0' 
+	gem 'database_cleaner', '>= 0.7.2'
 end	
-
