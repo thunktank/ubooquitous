@@ -1,0 +1,5 @@
+ubuntu
+nginx (or apache)
+unicorn (or passenger)
+postgresql (or mysql)
+rubyenv (or rvm)
