@@ -48,12 +48,17 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 group :development, :test do 
 	gem 'sqlite3'
 	gem 'rspec-rails', '>= 2.10.0'
-	gem 'webrat', '>= 0.7.2'
+  gem 'factory_girl_rails'
+  gem 'shoulda'
 end
 
 # Cucumber-rails required outside of env.rb. 
 group :test do
 #	gem 'ZenTest', '>= 4.8.0'
+  gem 'faker'
+  gem 'capybara'
+  gem 'guard-rspec'
+  gem 'launchy'
   gem 'autotest-rails', '>= 4.1.2'
 	gem 'cucumber-rails', '>= 1.2.0' 
 	gem 'database_cleaner', '>= 0.7.2'
