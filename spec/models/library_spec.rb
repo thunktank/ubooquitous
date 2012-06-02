@@ -11,6 +11,6 @@ describe Library do
   	FactoryGirl.build(:library, member_id: nil).should_not be_valid
   end	
   it "has 0 or more books" do
-  	FactoryGirl.build(:library).books.count >= 0
+  	FactoryGirl.build(:library).books.length >= 0
   end
 end
