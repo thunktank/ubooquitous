@@ -31,6 +31,8 @@ GEM
       multi_json (~> 1.0)
     addressable (2.2.8)
     arel (3.0.2)
+    autotest-rails (4.1.2)
+      ZenTest (~> 4.5)
     bcrypt-ruby (3.0.1)
     builder (3.0.0)
     capybara (1.1.2)
@@ -89,6 +91,7 @@ GEM
       rack
     omniauth-identity (1.0.0)
       omniauth (~> 1.0)
+    pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
@@ -167,13 +170,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  ZenTest (>= 4.8.0)
+  autotest-rails (>= 4.1.2)
   bcrypt-ruby (~> 3.0.0)
   coffee-rails (~> 3.2.1)
   cucumber-rails (>= 1.2.0)
   database_cleaner (>= 0.7.2)
   jquery-rails
   omniauth-identity
+  pg
   rails (= 3.2.3)
   rspec-rails (>= 2.10.0)
   sass-rails (~> 3.2.3)

@@ -5,6 +5,10 @@ gem 'rails', '3.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
+group :production do
+  gem 'pg'  
+end
+
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -49,7 +53,8 @@ end
 
 # Cucumber-rails required outside of env.rb. 
 group :test do
-	gem 'ZenTest', '>= 4.8.0'
+#	gem 'ZenTest', '>= 4.8.0'
+  gem 'autotest-rails', '>= 4.1.2'
 	gem 'cucumber-rails', '>= 1.2.0' 
 	gem 'database_cleaner', '>= 0.7.2'
 end	

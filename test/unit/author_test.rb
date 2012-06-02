@@ -5,3 +5,4 @@ class AuthorTest < ActiveSupport::TestCase
     assert true
   end
 end
+
