@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120602070448) do
+ActiveRecord::Schema.define(:version => 20120602123130) do
 
   create_table "authors", :force => true do |t|
     t.string   "first_name"
@@ -23,6 +23,11 @@ ActiveRecord::Schema.define(:version => 20120602070448) do
     t.datetime "updated_at", :null => false
   end
 
+  create_table "authors_book_versions", :id => false, :force => true do |t|
+    t.integer "author_id"
+    t.integer "book_version_id"
+  end
+
   create_table "book_versions", :force => true do |t|
     t.string   "title"
     t.string   "edition"
@@ -30,6 +35,7 @@ ActiveRecord::Schema.define(:version => 20120602070448) do
     t.datetime "published"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+    t.integer  "book_id"
   end
 
   create_table "books", :force => true do |t|
@@ -40,8 +46,9 @@ ActiveRecord::Schema.define(:version => 20120602070448) do
   create_table "contents", :force => true do |t|
     t.string   "location"
     t.string   "media_type"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
+    t.integer  "book_version_id"
   end
 
   create_table "identities", :force => true do |t|
@@ -50,6 +57,7 @@ ActiveRecord::Schema.define(:version => 20120602070448) do
     t.string   "password_digest"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "member_id"
   end
 
   create_table "libraries", :force => true do |t|

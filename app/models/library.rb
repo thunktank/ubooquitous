@@ -1,4 +1,3 @@
 class Library < ActiveRecord::Base
-  # attr_accessible :title, :body
-    belongs_to :member
+	belongs_to :member, :inverse_of => :libraries
 end

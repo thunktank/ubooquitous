@@ -49,7 +49,6 @@ group :development, :test do
 	gem 'sqlite3'
 	gem 'rspec-rails', '>= 2.10.0'
   gem 'factory_girl_rails'
-  gem 'shoulda'
 end
 
 # Cucumber-rails required outside of env.rb. 
@@ -60,6 +59,7 @@ group :test do
   gem 'guard-rspec'
   gem 'launchy'
   gem 'autotest-rails', '>= 4.1.2'
-	gem 'cucumber-rails', '>= 1.2.0' 
+	gem 'cucumber-rails', '>= 1.2.0', require:false
 	gem 'database_cleaner', '>= 0.7.2'
+  gem 'shoulda', require:false
 end	
