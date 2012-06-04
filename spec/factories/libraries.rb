@@ -1,5 +1,5 @@
 # spec/factories/libraries.rb
-require 'faker'
+# require 'faker'
 
 FactoryGirl.define do
   factory :library do |f|

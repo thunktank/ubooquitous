@@ -6,11 +6,6 @@ describe Library do
   	FactoryGirl.create(:library).should be_valid
   end
   it { should belong_to(:member) }
-     
-  it "is invalid without an owner (member_id)" do
-  	FactoryGirl.build(:library, member_id: nil).should_not be_valid
-  end	
-  it "has 0 or more books" do
-  	FactoryGirl.build(:library).books.length >= 0
-  end
+  it { should validate_presence_of(:member_id) }   
+  it { should have_many(:books) }
 end

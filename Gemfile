@@ -61,5 +61,5 @@ group :test do
   gem 'autotest-rails', '>= 4.1.2'
 	gem 'cucumber-rails', '>= 1.2.0', require:false
 	gem 'database_cleaner', '>= 0.7.2'
-  gem 'shoulda', require:false
+  gem 'shoulda-matchers', require:false
 end	
