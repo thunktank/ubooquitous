@@ -62,4 +62,5 @@ group :test do
 	gem 'cucumber-rails', '>= 1.2.0', require:false
 	gem 'database_cleaner', '>= 0.7.2'
   gem 'shoulda-matchers', require:false
+  gem 'random_data', '>= 1.5.2'
 end	

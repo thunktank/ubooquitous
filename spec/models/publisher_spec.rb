@@ -6,6 +6,6 @@ describe Publisher do
   it "has a valid factory" do
   	FactoryGirl.create(:publisher).should be_valid
   end
-  it { should have_many(:book_versions) }
+  it { should have_many(:book_versions).dependent(:destroy) }
   it { should validate_uniqueness_of(:name) }
 end

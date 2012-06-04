@@ -9,6 +9,5 @@ describe Identity do
 	it { should validate_presence_of(:member_id) }   
 	it { should validate_presence_of(:password) }   
 	it { should validate_presence_of(:name) }   
-	it { should validate_uniqueness_of(:email) }   
 end
 

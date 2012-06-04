@@ -7,5 +7,5 @@ describe Library do
   end
   it { should belong_to(:member) }
   it { should validate_presence_of(:member_id) }   
-  it { should have_many(:books) }
+  it { should have_many(:books).dependent(:destroy) }
 end
