@@ -9,5 +9,6 @@ describe BookVersion do
   it { should validate_presence_of(:book_id) }   
   it { should have_and_belong_to_many(:authors) }
   it { should belong_to(:publisher) }
+  it { should validate_presence_of(:publisher_id) }   
   it { should have_many(:contents).dependent(:destroy) }
 end

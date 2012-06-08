@@ -7,7 +7,8 @@ describe Identity do
   end
 	it { should belong_to(:member) }
 	it { should validate_presence_of(:member_id) }   
-	it { should validate_presence_of(:password) }   
-	it { should validate_presence_of(:name) }   
+	it { should validate_presence_of(:password_digest) }   
+  it { should validate_presence_of(:name) }   
+  it { should validate_presence_of(:email) }   
 end
 

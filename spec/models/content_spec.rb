@@ -7,4 +7,6 @@ describe Content do
   end
   it { should belong_to(:book_version) }
   it { should validate_presence_of(:book_version_id) }   
+  it { should validate_presence_of(:location) }   
+  it { should validate_presence_of(:media_type) }   
 end
