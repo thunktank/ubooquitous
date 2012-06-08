@@ -3,7 +3,7 @@ require 'spec_helper'
 
 describe BookVersion do
   it "has a valid factory" do
-  	FactoryGirl.create(:book_version).should be_valid
+  	create(:book_version).should be_valid
   end
   it { should belong_to(:book) }
   it { should validate_presence_of(:book_id) }   

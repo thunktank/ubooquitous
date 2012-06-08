@@ -48,7 +48,7 @@ gem 'capistrano'
 group :development, :test do 
 	gem 'sqlite3'
 	gem 'rspec-rails', '>= 2.10.0'
-  gem 'factory_girl_rails'
+  gem "factory_girl_rails", "~> 3.0"
 end
 
 # Cucumber-rails required outside of env.rb. 

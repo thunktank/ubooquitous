@@ -209,7 +209,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   cucumber-rails (>= 1.2.0)
   database_cleaner (>= 0.7.2)
-  factory_girl_rails
+  factory_girl_rails (~> 3.0)
   faker
   guard-rspec
   jquery-rails
