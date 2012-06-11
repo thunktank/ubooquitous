@@ -17,17 +17,26 @@
 * use external reader  
 
 ## use cases:
+* create account
 * log-in 
-* add book
-* content
-	* metadata...
+* log-out
+* add library
+* edit library
+* delete library
+* add book (book_version, content, author(s))
+* edit book
+* delete book
+* add author
+* edit author
+* delete author
+* add publisher
+* edit publisher
+* delete publisher
+* open library
+* get book
 * search books
 	* based on metadata
-* get book
-* update book
-* delete book
 
 * text search
 	* open associated book at particular location
 * view book in browser
-* share books
